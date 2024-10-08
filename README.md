@@ -14,6 +14,7 @@
 
 ## Как создать индексный файл
 Из папки /mnt/hdd_2/map_cache всех файлов с уровнем от 0 до 8 создадим индексный файл mbt_z0-8.index
+
     ~> export MAP_PATH=/mnt/hdd_2/map_cache
     ~> ./MBTilesArchive -ci 0,8,0,* -i mbt_z0-8.index -p $MAP_PATH
 
@@ -25,6 +26,7 @@
 ## Как сделать БД с тайлами
 Из ранее созданного индексного файла mbt_z0-8.index теперь необходимо сделать SQLite БД с
 дедупликацией
+
     ~> export MAP_PATH=/mnt/hdd_2/map_cache
     ~> ./MBTilesArchive -p $MAP_PATH -i mbt_z0-8.index -d mbt_z0-8.sqlite
 
